@@ -1,0 +1,10 @@
+services:
+  mongoDB:
+    image: mongo
+    ports: 
+      - "8080"
+  mini.io:
+    image: minio/minio
+    ports:
+      - "3030"
+    command: ["server", "--console-address", ":9001", "/data"]
